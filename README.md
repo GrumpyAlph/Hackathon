@@ -1,20 +1,20 @@
-# Hackathon - Grumpy Fortunes
+<h1 align="center">Grumpy Fortunes</h1>
+<h2 align="center"><i>The First AI Powered Oracle on Alephium</i></h2>
 
-## What is Grumpy Fortunes?
-Grumpy Fortunes is the first AI price prediction oracle on Alephium.  
-The underlying custom oracle contract and scheduled task are a more serious undertaking.  The system uses historical data from CoinGecko (We have plans to eventually expand this to use other sources as well to ensure price accuracy.)  The scheduled task is run at bar close to retrieve and store the daily price information in the database.  The stored price data are then collated and sent to the AI for analysis.  The analysis returns an AI prediction for 3 time frames 24 hr, 7 day, and 1 month.  This analysis is then stored on the blockchain in the contract for use by this system or any other contracts that would like to call the oracle.  The oracle contract was implemented using the map function to allow for historical price prediction requests.
+### What is Grumpy Fortunes?
+Grumpy Fortunes is the first AI-driven price prediction oracle on the Alephium blockchain, but don't let the serious tech fool you—Grumpy's a bit of a jokester! Our custom oracle contract and scheduled task run smoothly in the background to gather and analyze historical price data from CoinGecko. (We're planning to expand to more data sources soon—stay tuned!) Every day at the market close, we collect and store price data. This data is then processed by our AI to predict prices for 24 hours, 7 days, and 1 month ahead. These predictions, along with Alephium's current price and the prediction date, are saved on the blockchain for use by Grumpy or any other curious contracts.
+
+And yes, the oracle contract includes a "map" function, so you can even request historical price predictions. Nostalgia, anyone?
 
 ### What is an oracle?
-In antiquity:
-> A person (such as a priestess in ancient Greece) through whom a deity is believed to speak.
-> A shrine where such divine communications are delivered.
-> An authoritative or wise statement or prediction
-> (www.merriam-webster.com/dictionary/oracle)
+In ancient times:
+> A wise figure (often a priestess) believed to speak on behalf of the gods, delivering divine prophecies and predictions. (www.merriam-webster.com/dictionary/oracle)
 
-### In Crypto:
-> Blockchain oracles are entities that connect blockchains to external systems, enabling smart contracts to execute based on real-world inputs and outputs. 
-> Oracles play an important role in the creation of the verifiable web, connecting isolated blockchains to off-chain data and compute, and enabling interoperability between blockchains.
-> Blockchain oracles are not the data source themselves, but rather the layer that queries, verifies, and authenticates external data sources and then relays that information.
-> (www.coinbase.com/learn/crypto-glossary/what-is-a-blockchain-oracle-in-crypto)
+In crypto:
+> Blockchain oracles are like bridges between blockchains and the real world. They connect smart contracts to external data sources, so decisions can be made based on real-world events. While oracles don't generate the data themselves, they verify and relay it, allowing blockchains to interact with external systems. (www.coinbase.com/learn/crypto-glossary/what-is-a-blockchain-oracle-in-crypto)
 
-But Grumpy Fortunes is much more than just a price oracle!  Designed after the idea of the Zoltar fortune telling machine, we use the custom oracle to allow Grumpy to "predict" the future price of Alephium in a way that only Grumpy can do!  The system, usese a contract to call the oracle contract to get the current prediction (even though this is unneccessary since the data is in the tables, it shows how the oracle can be used by other contracts).  Once the prediction has been loaded, the system takes the prediction and sends it back to the AI to get a sarcastic remark about the prediction.  
+### So, what about Grumpy Fortune?
+Grumpy Fortunes is way more than just a price oracle! Modeled after the famous Zoltar fortune-telling machines, Grumpy delivers price predictions with his unique brand of sarcasm. The system retrieves predictions from our oracle contract and then sends them back to the AI. The result? Grumpy adds a sassy, often sarcastic comment to brighten your day (or ruin your hopes). Plus, we’ve thrown in some entertainment while you're waiting for the transaction to confirm. After all, why settle for boring when you’ve got Grumpy?
+
+### Summary
+Grumpy Fortunes is both a cutting-edge AI-powered oracle and a fun twist on the old-school fortune teller machine. Get your predictions, but don't take them too seriously—unless you enjoy financial advice from a grumpy cat!
