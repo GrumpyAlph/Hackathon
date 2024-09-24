@@ -1,0 +1,50 @@
+{
+  "fullNodeVersion": "v3.6.0",
+  "compilerOptionsUsed": {
+    "ignoreUnusedConstantsWarnings": false,
+    "ignoreUnusedVariablesWarnings": false,
+    "ignoreUnusedFieldsWarnings": false,
+    "ignoreUnusedPrivateFunctionsWarnings": false,
+    "ignoreUpdateFieldsCheckWarnings": false,
+    "ignoreCheckExternalCallerWarnings": false,
+    "ignoreUnusedFunctionReturnWarnings": false
+  },
+  "infos": {
+    "GrumpyFortunes": {
+      "sourceFile": "grumpyFortunes\\GrumpyFortunes.ral",
+      "sourceCodeHash": "42963c362eb51dce8ff42b86020f934b40cb5ff799b4876a1af9e71cf1a639dd",
+      "bytecodeDebugPatch": "",
+      "codeHashDebug": "277cb0d72a3759824862646ed1416f23afe9b9af7f0cfe5f874fa6d2674bda04"
+    },
+    "IPriceOracle": {
+      "sourceFile": "grumpyFortunes\\GrumpyFortunes.ral",
+      "sourceCodeHash": "42963c362eb51dce8ff42b86020f934b40cb5ff799b4876a1af9e71cf1a639dd",
+      "bytecodeDebugPatch": "",
+      "codeHashDebug": ""
+    },
+    "Prediction": {
+      "sourceFile": "oracle\\priceOracle.ral",
+      "sourceCodeHash": "e5b08a09a6c65ca2d472b4a0d9b4c9a43e66cec0e8b7378382c2ea4a8b6c8ef0",
+      "bytecodeDebugPatch": "",
+      "codeHashDebug": ""
+    },
+    "PriceOracle": {
+      "sourceFile": "oracle\\priceOracle.ral",
+      "sourceCodeHash": "e5b08a09a6c65ca2d472b4a0d9b4c9a43e66cec0e8b7378382c2ea4a8b6c8ef0",
+      "bytecodeDebugPatch": "=6-2+62=2-2+b7=2-2+ff=13-1+3=84+7a7e0214696e73657274206174206d617020706174683a2000=362",
+      "codeHashDebug": "5d363ea4a6d91d5d77c1952f969eef89dccda60536f6454c69aac096b216aed8"
+    },
+    "PriceOracleValue": {
+      "sourceFile": "grumpyFortunes\\GrumpyFortunes.ral",
+      "sourceCodeHash": "42963c362eb51dce8ff42b86020f934b40cb5ff799b4876a1af9e71cf1a639dd",
+      "bytecodeDebugPatch": "",
+      "codeHashDebug": ""
+    },
+    "UpdatePrediction": {
+      "sourceFile": "oracle\\updatePrediction.ral",
+      "sourceCodeHash": "676d01ed85830fe104602bf60e2527df227fb30f42bcf99c21300daaf0d8b927",
+      "bytecodeDebugPatch": "",
+      "codeHashDebug": ""
+    }
+  }
+}

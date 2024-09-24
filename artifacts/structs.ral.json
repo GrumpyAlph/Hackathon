@@ -1,0 +1,38 @@
+[
+  {
+    "name": "PriceOracleValue",
+    "fieldNames": [
+      "date",
+      "text",
+      "price"
+    ],
+    "fieldTypes": [
+      "U256",
+      "ByteVec",
+      "U256"
+    ],
+    "isMutable": [
+      false,
+      false,
+      false
+    ]
+  },
+  {
+    "name": "Prediction",
+    "fieldNames": [
+      "date",
+      "text",
+      "price"
+    ],
+    "fieldTypes": [
+      "U256",
+      "ByteVec",
+      "U256"
+    ],
+    "isMutable": [
+      false,
+      false,
+      false
+    ]
+  }
+]

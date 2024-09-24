@@ -1,0 +1,8 @@
+TxScript UpdatePrediction(
+  oracle: PriceOracle,
+  newDate: U256,
+  newText: ByteVec,
+  newPrice: U256
+) {
+  return oracle.updatePrediction{callerAddress!() -> ALPH: minimalContractDeposit!()}(newDate, newText, newPrice)
+}

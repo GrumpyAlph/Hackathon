@@ -1,0 +1,110 @@
+{
+  "version": "v3.6.4",
+  "name": "PriceOracle",
+  "bytecode": "02034049409e40e601030306004021d3c92b20f4b4ce00450c7b160016011602170517041703b4d1a2140a5f5f6d61705f5f305f5fa0004044160316041605b1d20400a0000d2aa100051600160116026001000002034028d3e6dca9dea0000c330d7ba0000d2b1700140a5f5f6d61705f5f305f5f16004044cbc50d7b0c0d0d140a5f5f6d61705f5f305f5f16004044cb1701160101000d0d0d160101000e0d0d160101000201000102031fd3a3ecbc98140a5f5f6d61705f5f305f5f16004044cbc50d7b0c0d0d140a5f5f6d61705f5f305f5f16004044cb1701160101000d0d0d160101000e0d0d1601010002",
+  "codeHash": "6688b508da108627ea830836379944c0210bf31b899bf1c88dec63ae57b7aa74",
+  "fieldsSig": {
+    "names": [
+      "trustedSource",
+      "predictionCount"
+    ],
+    "types": [
+      "Address",
+      "U256"
+    ],
+    "isMutable": [
+      false,
+      true
+    ]
+  },
+  "eventsSig": [
+    {
+      "name": "PredictionUpdated",
+      "fieldNames": [
+        "date",
+        "text",
+        "price"
+      ],
+      "fieldTypes": [
+        "U256",
+        "ByteVec",
+        "U256"
+      ]
+    }
+  ],
+  "functions": [
+    {
+      "name": "updatePrediction",
+      "paramNames": [
+        "newDate",
+        "newText",
+        "newPrice"
+      ],
+      "paramTypes": [
+        "U256",
+        "ByteVec",
+        "U256"
+      ],
+      "paramIsMutable": [
+        false,
+        false,
+        false
+      ],
+      "returnTypes": []
+    },
+    {
+      "name": "getLatestPrediction",
+      "paramNames": [],
+      "paramTypes": [],
+      "paramIsMutable": [],
+      "returnTypes": [
+        "Prediction"
+      ]
+    },
+    {
+      "name": "getPredictionAt",
+      "paramNames": [
+        "index"
+      ],
+      "paramTypes": [
+        "U256"
+      ],
+      "paramIsMutable": [
+        false
+      ],
+      "returnTypes": [
+        "Prediction"
+      ]
+    }
+  ],
+  "constants": [],
+  "enums": [
+    {
+      "name": "ErrorCodes",
+      "fields": [
+        {
+          "name": "Unauthorized",
+          "value": {
+            "type": "U256",
+            "value": "0"
+          }
+        },
+        {
+          "name": "InvalidIndex",
+          "value": {
+            "type": "U256",
+            "value": "1"
+          }
+        }
+      ]
+    }
+  ],
+  "mapsSig": {
+    "names": [
+      "predictions"
+    ],
+    "types": [
+      "Map[U256,Prediction]"
+    ]
+  }
+}

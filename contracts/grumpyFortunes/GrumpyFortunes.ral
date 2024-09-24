@@ -1,0 +1,21 @@
+struct PriceOracleValue {
+  date: U256,
+  text: ByteVec,
+  price: U256
+}
+
+Interface IPriceOracle {
+  pub fn getLatestPrediction() -> PriceOracleValue
+}
+
+Contract GrumpyFortunes(
+  oracle: IPriceOracle
+) {
+
+  @using(checkExternalCaller = false)
+  pub fn getFortune() -> PriceOracleValue  {
+    let latestPrediction = oracle.getLatestPrediction()
+
+    return latestPrediction
+  }
+}

@@ -1,0 +1,238 @@
+/**
+ *
+ */
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+/**
+ *
+ */
+html{
+  width: 100%; 
+  height: 100%; 
+}
+
+:root {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+
+}
+.f0{flex:0;}
+.f1{flex:1;}
+.f2{flex:2;}
+.f3{flex:3;}
+.f4{flex:4;} 
+.f5{flex:5;}
+
+body {
+  color: var(--foreground);
+  background-color: var(--background);
+  background-image: url("./assets/img/Grumpy.fairy.png");
+  background-position: top center;
+  background-size: cover;
+  background-repeat:no-repeat;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.machine::after
+{
+  content:""; 
+  z-index:1;
+  display: block;
+  padding-top:166%; 
+  background-image: url("./assets/img/Grumpy.booth.v3.png");
+  background-position: top center;
+  background-size: contain;
+  background-repeat:no-repeat;
+  position: relative;
+  
+}
+
+
+
+.machine .background
+{
+  background-color: #000;
+  z-index: 0;
+  margin: 35% 17%;  
+  overflow: hidden;
+}
+
+.machine .background::after
+{
+  content:"";
+  display:block; 
+  width: 125%;
+  height: 125%;
+  margin: -39% -12%;
+  background-image: url("./assets/img/spining.back.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation: spinOpacity 3500ms ease infinite;
+  opacity:1; 
+}
+.gf-logo
+{
+  width: 46%;
+  margin: 44% auto 0;
+
+}
+.bg-darker{
+  background-color: #0009;
+}
+@keyframes glowing {
+  0% { box-shadow: 0 0 -10px #c4a300;   background-color: #000 ;}
+  40% { box-shadow: 0 0 20px #c4a30022; background-color: #c4a30022; }
+  60% { box-shadow: 0 0 20px #c4a30022; background-color: #c4a30022;}
+  100% { box-shadow: 0 0 -10px #c4a300; background-color: #000 ; }
+}
+
+.glower {
+  animation: glowing 2500ms infinite;
+  border-radius: 50%;
+}
+.bg-mask-black
+{
+  background-color: #000A;
+}
+
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+
+
+.f-fixed
+{
+  position: fixed;
+  top:0; 
+  right:0; 
+  bottom:0; 
+  left:0; 
+}
+.inside
+{
+  position: absolute;
+  top:0; 
+  right:0; 
+  bottom:0; 
+  left:0; 
+}
+.scrollable
+{
+  overflow-x: hidden;
+  overflow-y: scroll; 
+}
+/**
+ * @To remove
+ * old price table
+ */
+ td  {
+  background-color: transparent;
+}
+.stripped:nth-child(odd)
+{
+    background-color: #EEE;
+}
+
+
+.scrollable {
+  --scrollbar-color-thumb: #FFF6;
+  --scrollbar-color-track: #0002;
+  --scrollbar-width: thin;
+  --scrollbar-width-legacy: 15px;
+
+}
+
+/* Modern browsers with `scrollbar-*` support */
+@supports (scrollbar-width: auto) {
+  .scrollable {
+      scrollbar-color: var(--scrollbar-color-thumb) var(--scrollbar-color-track);
+      scrollbar-width: var(--scrollbar-width);   
+      scrollbar-arrow-color: #0000;         
+  }
+}
+
+/* Legacy browsers with `::-webkit-scrollbar-*` support */
+/*@supports selector(::-webkit-scrollbar-thumb) 
+{*/
+  ::-webkit-scrollbar-thumb {
+      background: var(--scrollbar-color-thumb);
+      -webkit-border-radius: 15px;
+      border-radius: 15px;
+  }
+  ::-webkit-scrollbar-track {
+      background: var(--scrollbar-color-track);
+      -webkit-border-radius: 15px;
+      border-radius: 15px;
+  }
+  ::-webkit-scrollbar {
+      max-width: var(--scrollbar-width-legacy);
+      max-height: var(--scrollbar-width-legacy);
+  }
+
+
+.walletButton
+{
+  position: absolute;
+  bottom:0; 
+  left:0; 
+  right:0; 
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+@keyframes spinOpacity {
+  0% {
+    transform: rotate(0deg);
+    opacity:0.4;
+  }
+  50% {
+    transform: rotate(180deg);
+    opacity:0.7;
+  }  
+  100% {
+    transform: rotate(360deg);
+    opacity:0.4;
+  }
+}
+
+@media screen  and (max-width:960px) {
+  .prompt
+  {
+    background-color: #000C;
+  }
+}
+@media screen and (min-width:576px) and (max-width:960px) {
+  .mb-half
+  {
+      margin-bottom:-30%; 
+  }  
+ 
+}
+@media screen and (max-width:576px) {
+  .mb-half
+  {
+      margin-bottom:-50%; 
+  }  
+ 
+}
+.z-2
+{
+  z-index: 2;
+}

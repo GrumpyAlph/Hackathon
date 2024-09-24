@@ -1,0 +1,88 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  position: relative;
+  background-color: black;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 400px;
+  width: 100%;
+  border: 1px solid white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.modal-buttons button {
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.modal-buttons button:first-child {
+  background-color: #000;
+  color: #fff;
+  margin-right: 10px;
+  text-transform: uppercase;
+  border: 1px solid peach;
+}
+
+.modal-buttons button:first-child:hover {
+  background-color: white;
+  color: black;
+}
+
+.modal-buttons button:last-child {
+  background-color: #000;
+  border: 2px solid white;
+  color: white;
+  text-transform: uppercase;
+}
+
+.modal-buttons button:last-child:hover {
+  background-color: black;
+  color: white;
+}
+
+.modal-body {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+
+.spinner-container {
+  margin-right: 1.5rem;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+
+.message-container {
+  flex-grow: 1;
+}
+
+.spinner {
+  width: 6.25rem;
+  height: 6.25rem;
+  animation: spin 2.5s linear infinite;
+  object-fit: contain;
+  flex-shrink: 0;
+  flex-grow: 0;
+}

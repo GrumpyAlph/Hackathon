@@ -1,0 +1,31 @@
+{
+  "version": "v3.6.4",
+  "name": "GrumpyFortunes",
+  "bytecode": "0101402101000003030cd3ba3afee30c0fce00d4e6dca9de17021701170016001601160202",
+  "codeHash": "277cb0d72a3759824862646ed1416f23afe9b9af7f0cfe5f874fa6d2674bda04",
+  "fieldsSig": {
+    "names": [
+      "oracle"
+    ],
+    "types": [
+      "IPriceOracle"
+    ],
+    "isMutable": [
+      false
+    ]
+  },
+  "eventsSig": [],
+  "functions": [
+    {
+      "name": "getFortune",
+      "paramNames": [],
+      "paramTypes": [],
+      "paramIsMutable": [],
+      "returnTypes": [
+        "PriceOracleValue"
+      ]
+    }
+  ],
+  "constants": [],
+  "enums": []
+}

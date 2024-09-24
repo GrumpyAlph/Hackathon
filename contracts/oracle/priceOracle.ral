@@ -1,0 +1,49 @@
+struct Prediction {
+  date: U256,
+  text: ByteVec,
+  price: U256
+}
+
+Contract PriceOracle(
+  trustedSource: Address,
+  mut predictionCount: U256
+) {
+  mapping[U256, Prediction] predictions
+
+  event PredictionUpdated(date: U256, text: ByteVec, price: U256)
+
+  enum ErrorCodes {
+    Unauthorized = 0
+    InvalidIndex = 1
+  }
+
+  @using(
+    updateFields = true,
+    preapprovedAssets = true,
+    checkExternalCaller = false
+  )
+  pub fn updatePrediction(newDate: U256, newText: ByteVec, newPrice: U256) -> () {
+    assert!(callerAddress!() == trustedSource, ErrorCodes.Unauthorized)
+    
+    let newPrediction = Prediction { date: newDate, text: newText, price: newPrice }
+    
+    predictions.insert!(callerAddress!(), predictionCount, newPrediction)
+    
+    predictionCount = predictionCount + 1
+
+    emit PredictionUpdated(newDate, newText, newPrice)
+  }
+
+  pub fn getLatestPrediction() -> Prediction {
+    assert!(predictionCount > 0, ErrorCodes.InvalidIndex)
+    let latestIndex = predictionCount - 1
+    assert!(predictions.contains!(latestIndex), ErrorCodes.InvalidIndex)
+    return predictions[latestIndex]
+  }
+
+  pub fn getPredictionAt(index: U256) -> Prediction {
+    assert!(predictions.contains!(index), ErrorCodes.InvalidIndex)
+    return predictions[index]
+  }
+
+}
